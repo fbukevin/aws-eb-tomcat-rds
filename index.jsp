@@ -8,11 +8,11 @@
 
   /** MySQL connection **/
   // Read RDS connection information from the environment
-  String dbName = "ebdb"; //System.getProperty("RDS_DB_NAME");
-  String userName = "test"; //System.getProperty("RDS_USERNAME");
-  String password = "testtest"; System.getProperty("RDS_PASSWORD");
-  String hostname = "tomcatrds.cz8fyhaapsmk.ap-northeast-1.rds.amazonaws.com"; //System.getProperty("RDS_HOSTNAME");
-  String port = "3306"; //System.getProperty("RDS_PORT");
+  String dbName = System.getProperty("RDS_DB_NAME");
+  String userName = System.getProperty("RDS_USERNAME");
+  String password = System.getProperty("RDS_PASSWORD");
+  String hostname = System.getProperty("RDS_HOSTNAME");
+  String port = System.getProperty("RDS_PORT");
   String jdbcUrl = "jdbc:mysql://" + hostname + ":" +
           port + "/" + dbName + "?user=" + userName + "&password=" + password;
 
